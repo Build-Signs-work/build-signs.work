@@ -66,6 +66,30 @@ export const EXAMPLES = [
   { file: "railroad-do-not-stop", type: "regulatory-sign", params: { text: "DO NOT STOP ON TRACKS" } },
   { file: "railroad-look", type: "mutcd-sign", params: { code: "R15-8" } },
   { file: "railroad-no-horn", type: "warning", params: { text: "NO|TRAIN|HORN" } },
+
+  // ADA-Signs.work
+  { file: "ada-room", type: "ada-room-sign", params: { number: "204", text: "CONFERENCE ROOM" } },
+  { file: "ada-restroom", type: "ada-restroom-sign", params: { kind: "all-gender" } },
+  { file: "ada-exit", type: "ada-exit-sign", params: { kind: "exit-stair-down" } },
+  { file: "ada-symbol", type: "ada-symbol-sign", params: { text: "ACCESSIBLE|ENTRANCE", arrow: "right" } },
+  { file: "ada-parking", type: "ada-parking-sign", params: { van: "yes" } },
+  { file: "ada-directional", type: "ada-directional-sign", params: { dest: ["Restrooms:left", "Elevator:right"] } },
+
+  // Boating-Signs.work
+  { file: "boating-no-wake", type: "waterway-marker", params: { text: "NO|WAKE", top: "SLOW", bottom: "ZONE" } },
+  { file: "boating-danger", type: "waterway-marker", params: { kind: "danger" } },
+  { file: "boating-marina", type: "marina-sign", params: {} },
+  { file: "boating-slip", type: "slip-marker", params: { slip: "B-12", dock: "DOCK B" } },
+  { file: "boating-dive-flag", type: "dive-flag", params: {} },
+  { file: "boating-signal-flags", type: "signal-flags", params: { text: "AHOY" } },
+
+  // DOT-Signs.work
+  { file: "dot-usdot", type: "usdot-number", params: { panel: "17x11", docket: "123456" } },
+  { file: "dot-placard", type: "hazmat-placard", params: { class: "3", un: "1203" } },
+  { file: "dot-corrosive", type: "hazmat-placard", params: { class: "8" } },
+  { file: "dot-un-panel", type: "un-number-panel", params: { un: "1993" } },
+  { file: "dot-oversize", type: "oversize-load", params: {} },
+  { file: "dot-wide-turns", type: "vehicle-safety-sign", params: { arrow: "right" } },
 ];
 
 function query(params) {

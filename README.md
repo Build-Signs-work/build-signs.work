@@ -1,7 +1,8 @@
 # build-signs.work
 
 The hub page for the free sign builders: Road-, Trail-, Park-, Airport-,
-Safety- and Railroad-Signs.work. It also holds the shared **Terms of Service**
+Safety-, Railroad-, ADA-, Boating- and DOT-Signs.work — the Build-Signs.work
+network; every site's footer links back here. It also holds the shared **Terms of Service**
 (`/terms/`) and **Privacy Policy** (`/privacy/`) that cover all of them.
 
 Three static pages on GitHub Pages (`CNAME` → build-signs.work, `.nojekyll`
@@ -9,7 +10,7 @@ so the files are served as-is). No build step, no analytics, no cookies.
 
 ## Files
 
-- `index.html` — the hub: brandmark, one card per builder site with six example
+- `index.html` — the hub: brandmark, one card per builder site (nine) with six example
   signs, how-it-works.
 - `terms/index.html`, `privacy/index.html` — the legal pages, linked from the
   footer. Header and footer markup is repeated in all three pages (no build
@@ -32,6 +33,13 @@ Edit `EXAMPLES` in `scripts/fetch-signs.mjs`, then:
 ```sh
 node scripts/fetch-signs.mjs                              # from the live API
 API=http://localhost:4000 node scripts/fetch-signs.mjs    # or a local backend
+```
+
+The ADA / boating / DOT examples were snapshotted from a local backend before
+those types reached production; a full re-run against the live API works once
+it's deployed.
+
+```sh
 ```
 
 Add or rename an `<img src="signs/…">` in `index.html` to match. Re-render
