@@ -41,9 +41,31 @@ img { display: block; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 800; font-size: 20px; letter-spacing: -.01em; }
 .brand img { width: 34px; height: 34px; }
 .brand span span { color: var(--muted); font-weight: 600; }
-.bar nav { margin-left: auto; display: flex; gap: 20px; font-weight: 600; font-size: 15px; }
-.bar nav a { color: var(--ink); text-decoration: none; }
-.bar nav a:hover { color: var(--link); text-decoration: underline; }
+.bar .wrap { flex-wrap: nowrap; }
+.brand { white-space: nowrap; }
+.label-short { display: none; }
+
+/* "Sign Builders" menu: toggle, backdrop, slide-in panel (assets/menu.js) */
+.menu-toggle { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; font: 800 13px "Overpass", system-ui, sans-serif; letter-spacing: .04em; text-transform: uppercase; padding: 8px 14px 7px 12px; border: 1px solid var(--line); border-radius: 8px; background: transparent; color: var(--ink); cursor: pointer; }
+.menu-toggle:hover, .menu-toggle:focus-visible { background: var(--card); border-color: var(--muted); }
+.menu-icon { display: inline-flex; flex-direction: column; gap: 3px; width: 15px; margin-top: -1px; }
+.menu-icon span { display: block; height: 2px; border-radius: 2px; background: currentColor; }
+.menu-overlay { position: fixed; inset: 0; z-index: 90; background: rgba(10, 16, 20, .45); opacity: 0; visibility: hidden; transition: opacity .2s ease, visibility .2s ease; }
+.menu-panel { position: fixed; top: 0; right: 0; z-index: 100; width: min(360px, 88vw); height: 100%; display: flex; flex-direction: column; background: var(--paper); border-left: 1px solid var(--line); box-shadow: -16px 0 44px rgba(0, 0, 0, .22); transform: translateX(100%); visibility: hidden; transition: transform .22s ease, visibility .22s ease; outline: none; }
+.menu-overlay.is-open { opacity: 1; visibility: visible; }
+.menu-panel.is-open { transform: translateX(0); visibility: visible; transition: transform .22s ease, visibility 0s; }
+.menu-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 14px 14px 20px; border-bottom: 1px solid var(--line); }
+.menu-title { font-size: 12px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); }
+.menu-close { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 0; border-radius: 8px; background: transparent; color: var(--ink); cursor: pointer; }
+.menu-close:hover, .menu-close:focus-visible { background: var(--card); }
+.menu-list { list-style: none; margin: 0; padding: 8px 0 24px; overflow-y: auto; overscroll-behavior: contain; }
+.menu-list a { display: flex; align-items: center; gap: 14px; padding: 10px 20px; color: var(--ink); text-decoration: none; }
+.menu-list a:hover, .menu-list a:focus-visible { background: var(--card); }
+.menu-list img { width: 40px; height: 40px; object-fit: contain; flex-shrink: 0; background: var(--tile); border-radius: 6px; padding: 3px; }
+.menu-list .name { display: block; font-weight: 800; font-size: 16px; }
+.menu-list .blurb { display: block; font-size: 13px; color: var(--muted); line-height: 1.35; }
+.menu-list a:hover .name { text-decoration: underline; text-underline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .menu-overlay, .menu-panel { transition: none; } }
 
 /* Hero */
 .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; padding-top: 48px; padding-bottom: 40px; }
@@ -113,6 +135,7 @@ footer a { color: inherit; }
   .sites, .how { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
-  .bar nav { margin-left: 0; width: 100%; padding-bottom: 10px; gap: 16px; }
+  .label-long { display: none; }
+  .label-short { display: inline; }
   .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 }

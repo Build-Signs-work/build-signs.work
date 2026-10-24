@@ -17,6 +17,8 @@ so the files are served as-is). No build step, no analytics, no cookies.
 - `assets/site.css` — the one stylesheet. The footer's "Free sign builders"
   list mirrors the sibling sites' `<SiblingSites>` row (name + blurb from
   their `siblingSites.ts`).
+- `assets/menu.js` — the top-right "Sign Builders" slide-in menu (road-signs'
+  Sign Choices pattern): links to each site, closes on Escape / backdrop / ×.
 - `icon.svg` — the favicon and brandmark: a fingerpost whose blades use the
   sibling sites' colours (guide green, airfield yellow, park brown, safety red).
 - `signs/*.svg` — the example signs, snapshotted from the shared sign API and

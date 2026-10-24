@@ -28,11 +28,30 @@
 <header class="bar">
   <div class="wrap">
     <a class="brand" href="../" aria-label="Build-Signs.work home"><img src="../icon.svg" alt=""><span>Build-Signs<span>.work</span></span></a>
-    <nav aria-label="Page">
-      <a href="../#builders">Builders</a>
-    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+      <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="label-long">Sign Builders</span><span class="label-short">Menu</span>
+    </button>
   </div>
 </header>
+
+<div class="menu-overlay" data-menu-close aria-hidden="true"></div>
+<div class="menu-panel" id="site-menu" role="dialog" aria-modal="true" aria-label="Sign builders" tabindex="-1" inert>
+  <div class="menu-head">
+    <span class="menu-title">Sign Builders</span>
+    <button class="menu-close" type="button" aria-label="Close menu" data-menu-close>
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  </div>
+  <ul class="menu-list">
+    <li><a href="https://www.road-signs.work"><img src="../signs/road-stop.svg" alt=""><span><span class="name">Road-Signs.work</span><span class="blurb">MUTCD road &amp; street signs</span></span></a></li>
+    <li><a href="https://www.trail-signs.work"><img src="../signs/trail-forest-route.svg" alt=""><span><span class="name">Trail-Signs.work</span><span class="blurb">Forest Service trail &amp; forest-road signs</span></span></a></li>
+    <li><a href="https://www.park-signs.work"><img src="../signs/park-campsite.svg" alt=""><span><span class="name">Park-Signs.work</span><span class="blurb">Brown-and-white park &amp; campground signs</span></span></a></li>
+    <li><a href="https://www.airport-signs.work"><img src="../signs/airport-location.svg" alt=""><span><span class="name">Airport-Signs.work</span><span class="blurb">FAA airfield runway &amp; taxiway signs</span></span></a></li>
+    <li><a href="https://www.safety-signs.work"><img src="../signs/safety-nfpa-704.svg" alt=""><span><span class="name">Safety-Signs.work</span><span class="blurb">OSHA workplace safety signs</span></span></a></li>
+    <li><a href="https://www.railroad-signs.work"><img src="../signs/railroad-advance.svg" alt=""><span><span class="name">Railroad-Signs.work</span><span class="blurb">MUTCD railroad crossing signs</span></span></a></li>
+  </ul>
+</div>
 
 <main class="wrap legal">
     <h1>Terms of Service</h1>
@@ -101,5 +120,6 @@
   </div>
 </footer>
 
+<script src="../assets/menu.js" defer></script>
 </body>
 </html>
