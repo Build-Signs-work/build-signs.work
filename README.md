@@ -2,15 +2,21 @@
 
 The hub page for the free sign builders: Road-, Trail-, Park-, Airport-,
 Safety- and Railroad-Signs.work. It also holds the shared **Terms of Service**
-(`/#terms`) and **Privacy Policy** (`/#privacy`) that cover all of them.
+(`/terms/`) and **Privacy Policy** (`/privacy/`) that cover all of them.
 
-A single static page on GitHub Pages (`CNAME` → build-signs.work, `.nojekyll`
+Three static pages on GitHub Pages (`CNAME` → build-signs.work, `.nojekyll`
 so the files are served as-is). No build step, no analytics, no cookies.
 
 ## Files
 
-- `index.html` — the whole page: brandmark, one card per builder site with six
-  example signs, how-it-works, Terms, Privacy. CSS is inline.
+- `index.html` — the hub: brandmark, one card per builder site with six example
+  signs, how-it-works.
+- `terms/index.html`, `privacy/index.html` — the legal pages, linked from the
+  footer. Header and footer markup is repeated in all three pages (no build
+  step): change it in each.
+- `assets/site.css` — the one stylesheet. The footer's "Free sign builders"
+  list mirrors the sibling sites' `<SiblingSites>` row (name + blurb from
+  their `siblingSites.ts`).
 - `icon.svg` — the favicon and brandmark: a fingerpost whose blades use the
   sibling sites' colours (guide green, airfield yellow, park brown, safety red).
 - `signs/*.svg` — the example signs, snapshotted from the shared sign API and
