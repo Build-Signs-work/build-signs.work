@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Build-Signs.work">
+  <rect width="64" height="64" rx="14" fill="#f6f4ee"/>
+  <rect x="29" y="8" width="6" height="50" rx="1.5" fill="#14202a"/>
+  <path d="M11 9h36l7 6.5-7 6.5H11z" fill="#006b3f"/>
+  <path d="M53 25H17l-7 6.5 7 6.5h36z" fill="#ffc72c"/>
+  <path d="M15 41h28l6 5.5-6 5.5H15z" fill="#7a4a1f"/>
+  <circle cx="32" cy="6.5" r="3.5" fill="#c8102e"/>
+</svg>
