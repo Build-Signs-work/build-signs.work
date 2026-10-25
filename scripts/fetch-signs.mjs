@@ -8,7 +8,7 @@
  *   node scripts/fetch-signs.mjs            # all signs
  *   API=http://localhost:4000 node scripts/fetch-signs.mjs
  *
- * Each entry is a backend sign type + params (the same calls the sibling
+ * Each entry is a backend sign type + params (the same calls the network
  * sites make); `file` is the name the page's <img> tags reference.
  */
 import { mkdir, writeFile } from "node:fs/promises";

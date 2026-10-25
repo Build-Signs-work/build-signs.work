@@ -4,7 +4,7 @@
 // pages are hand-written HTML with no build step, so the version is stamped in.
 import { readFile, writeFile } from "node:fs/promises";
 
-const PAGES = ["index.html", "privacy/index.html", "terms/index.html"];
+const PAGES = ["index.html", "privacy/index.html", "terms/index.html", "licenses/index.html"];
 const root = new URL("../", import.meta.url);
 const { version } = JSON.parse(await readFile(new URL("package.json", root), "utf8"));
 
