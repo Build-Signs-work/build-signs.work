@@ -6,7 +6,8 @@ network; every site's footer links back here. It also holds the shared **Terms o
 (`/terms/`) and **Privacy Policy** (`/privacy/`) that cover all of them.
 
 Three static pages on GitHub Pages (`CNAME` → build-signs.work, `.nojekyll`
-so the files are served as-is). No build step, no analytics, no cookies.
+so the files are served as-is). No build step. Google Analytics via
+`assets/ga.js` (set `GA_ID` there — empty disables it); no cookies of its own.
 
 ## Files
 
@@ -20,6 +21,8 @@ so the files are served as-is). No build step, no analytics, no cookies.
   their `siblingSites.ts`).
 - `assets/menu.js` — the top-right "Sign Builders" slide-in menu (road-signs'
   Sign Choices pattern): links to each site, closes on Escape / backdrop / ×.
+- `assets/ga.js` — gtag.js for the hub's own GA property, loaded by all three
+  pages; the measurement ID is the `GA_ID` constant at its top.
 - `icon.svg` — the favicon and brandmark: a fingerpost whose blades use the
   sibling sites' colours (guide green, airfield yellow, park brown, safety red).
 - `signs/*.svg` — the example signs, snapshotted from the shared sign API and
