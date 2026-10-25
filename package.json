@@ -1,12 +1,12 @@
 {
   "name": "build-signs.work",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": true,
   "description": "Hub page for the Build-Signs.work network of free sign builders. Static, no build step — package.json carries the site version (shown in the footer) and the repo's scripts.",
   "license": "BSD-3-Clause",
   "scripts": {
     "prepare": "git config core.hooksPath .githooks || true",
-    "version": "node scripts/sync-version.mjs && git add index.html privacy/index.html terms/index.html",
+    "version": "node scripts/sync-version.mjs",
     "fetch-signs": "node scripts/fetch-signs.mjs"
   }
 }
