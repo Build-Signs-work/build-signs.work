@@ -128,6 +128,7 @@ footer a { color: inherit; }
 .legal-links { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 22px; font-size: 14px; font-weight: 600; }
 .legal-links a { text-underline-offset: 2px; }
 .legal-links small { opacity: .7; font-weight: 400; font-size: 14px; }
+.version { margin: 12px 0 0; font-size: 12px; opacity: .6; font-variant-numeric: tabular-nums; }
 
 @media (max-width: 900px) {
   .hero .wrap { grid-template-columns: 1fr; padding-top: 32px; }
