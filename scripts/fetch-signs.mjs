@@ -15,7 +15,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const API = process.env.API ?? "https://api.road-signs.work";
+const API = process.env.API ?? "https://www.api-signs.work";
 const OUT = join(dirname(fileURLToPath(import.meta.url)), "..", "signs");
 
 export const EXAMPLES = [
