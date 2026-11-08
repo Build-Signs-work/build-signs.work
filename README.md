@@ -9,6 +9,9 @@ that cover all of them.
 Four static pages on GitHub Pages (`CNAME` → build-signs.work, `.nojekyll`
 so the files are served as-is). No build step. Google Analytics via
 `assets/ga.js` (set `GA_ID` there — empty disables it); no cookies of its own.
+Google AdSense: each page's `<head>` carries the `google-adsense-account`
+meta and the `adsbygoogle.js` loader (publisher `ca-pub-8989714718895680`),
+and `ads.txt` at the root lists the same publisher id — change them together.
 
 ## Files
 
