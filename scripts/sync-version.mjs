@@ -6,7 +6,14 @@
 import { execFileSync } from "node:child_process";
 import { readFile, writeFile } from "node:fs/promises";
 
-const PAGES = ["index.html", "privacy/index.html", "terms/index.html", "licenses/index.html"];
+const PAGES = [
+  "index.html",
+  "about/index.html",
+  "faq/index.html",
+  "privacy/index.html",
+  "terms/index.html",
+  "licenses/index.html",
+];
 const root = new URL("../", import.meta.url);
 const { version } = JSON.parse(await readFile(new URL("package.json", root), "utf8"));
 
