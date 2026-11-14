@@ -6,7 +6,7 @@ network; every site's footer links back here. It also holds the shared **Terms o
 (`/terms/`), **Privacy Policy** (`/privacy/`) and **Licenses** (`/licenses/`)
 that cover all of them.
 
-Six static pages on GitHub Pages (`CNAME` → build-signs.work, `.nojekyll`
+Seven static pages on GitHub Pages (`CNAME` → build-signs.work, `.nojekyll`
 so the files are served as-is). No build step. Google Analytics via
 `assets/ga.js` (set `GA_ID` there — empty disables it); no cookies of its own.
 Google AdSense: each page's `<head>` carries the `google-adsense-account`
@@ -20,6 +20,16 @@ and `ads.txt` at the root lists the same publisher id — change them together.
 - `about/index.html`, `faq/index.html` — About and the network-wide FAQ
   (FAQPage JSON-LD inline in its `<head>`; each sign site has its own `/faq`
   too), linked first in the footer.
+- `contact/index.html` + `assets/contact.js` — the hub's contact form, a
+  no-build copy of the sign sites' `<ContactForm>` (same fields, limits,
+  opt-in wording, Turnstile site key). POSTs to the backend's
+  `https://www.api-signs.work/api/contact`, so the backend's `CORS_ORIGIN`
+  must include `https://build-signs.work`, and the Turnstile widget's
+  hostnames must include `build-signs.work`. The Terms (`terms/#contact`)
+  make the form the only official way to reach us; the Privacy Policy's
+  `#contact-form`, Mailchimp and Cloudflare Turnstile sections are the
+  binding text the sites' `<ContactPrivacy>` mirrors. Every page's `<head>`
+  also loads Mailchimp's connected-site script (`id="mcjs"`).
 - `terms/index.html`, `privacy/index.html`, `licenses/index.html` — the legal
   pages, linked from the footer. Each sign site's `/terms` is a
   plain-language summary of `terms/` (`TermsSummary.tsx` there) — change the
