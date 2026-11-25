@@ -1,5 +1,6 @@
 # Build-Signs.work — same bot lists as each site's src/lib/robotsPolicy.ts
-# and the API's robots.txt; change them together.
+# and the API's robots.txt; change them together. AI training crawlers,
+# AI agents (since 2026-11-24) and SEO scrapers are disallowed.
 
 User-agent: *
 Allow: /
@@ -23,6 +24,12 @@ User-agent: Diffbot
 User-agent: omgili
 User-agent: Timpibot
 User-agent: ImagesiftBot
+User-agent: ChatGPT-User
+User-agent: Claude-User
+User-agent: Perplexity-User
+User-agent: DuckAssistBot
+User-agent: Meta-ExternalFetcher
+User-agent: MistralAI-User
 User-agent: AhrefsBot
 User-agent: SemrushBot
 User-agent: MJ12bot
